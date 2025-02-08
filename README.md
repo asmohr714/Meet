@@ -14,19 +14,19 @@ Calendar API to fetch upcoming events.
 
 As a user, I should be able to show or hide event details, so that I can easily access or minimize event information as needed.
 
-  Scenario: Event element is collapsed by default
-    Given the user is on the events page
-    Then the event element should be collapsed by default
+  Scenario: Event element is collapsed by default.
+    Given the user is on the events page,
+    Then the event element should be collapsed by default.
 
-  Scenario: User can expand an event to see details
-    Given the user is on the events page
-    When the user clicks on an event
-    Then the event details should be expanded
+  Scenario: User can expand an event to see details.
+    Given the user is on the events page,
+    when the user clicks on an event,
+    then the event details should be expanded
 
-  Scenario: User can collapse an event to hide details
-    Given the user has expanded an event to see details
-    When the user clicks on the event again
-    Then the event details should be collapsed
+  Scenario: User can collapse an event to hide details.
+    Given the user has expanded an event to see details,
+    when the user clicks on the event again,
+    then the event details should be collapsed.
 
 
 
@@ -34,15 +34,15 @@ As a user, I should be able to show or hide event details, so that I can easily 
 
 As a user, I should be able to specify the number of events displayed, so that I can control how many events I see at once and manage my event list more efficiently.
 
-  Scenario: Default number of events displayed
-    Given the user is on the events page
-    When the user has not specified a number of events
-    Then 32 events should be shown by default
+  Scenario: Default number of events displayed.
+    Given the user is on the events page,
+    when the user has not specified a number of events,
+    then 32 events should be shown by default.
 
-  Scenario: User changes the number of events displayed
-    Given the user is on the events page
-    When the user specifies a number of events to display
-    Then the specified number of events should be shown
+  Scenario: User changes the number of events displayed.
+    Given the user is on the events page,
+    when the user specifies a number of events to display,
+    then the specified number of events should be shown.
 
 
 ## Feature: Use the App When Offline

@@ -7,7 +7,7 @@ import React, { useState, useEffect } from 'react';
 
 // CitySearch component with input field and suggestions list
 
-const CitySearch = ({ allLocations }) => {
+const CitySearch = ({ allLocations, setCurrentCity }) => {
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [query, setQuery] = useState("");
     const [suggestions, setSuggestions] = useState([]);
@@ -32,10 +32,11 @@ const CitySearch = ({ allLocations }) => {
 // Handle the click event on the suggestions list, set the Query state to the clicked item and hide the list
 
     const handleItemClicked = (event) => {
-        const value = event.target.textContent;
-        setQuery(value);
-        setShowSuggestions(false); // to hide the list
-      };
+     const value = event.target.textContent;
+     setQuery(value);
+      setShowSuggestions(false);
+      setCurrentCity(value);
+    };
 
 // UI returned for the CitySearch component
 

@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 
+
 // src/components/EventList.js
+
 import React from 'react';
 import Event from './Event';
 

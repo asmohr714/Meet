@@ -2,6 +2,7 @@
 /* eslint-disable no-undef */
 
 // src/__tests__/CitySearch.test.js
+
 import React from 'react';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';

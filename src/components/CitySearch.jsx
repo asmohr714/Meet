@@ -3,7 +3,7 @@
 /* eslint-disable no-unused-vars */
 
 // src/components/CitySearch.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // CitySearch component with input field and suggestions list
 
@@ -11,6 +11,10 @@ const CitySearch = ({ allLocations }) => {
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [query, setQuery] = useState("");
     const [suggestions, setSuggestions] = useState([]);
+
+    useEffect(() => {
+      setSuggestions(allLocations);
+    }, [`${allLocations}`]);
 
 // Obtain current value of the input field, fillter allLocations, set the Query state to inut value
 // and set the suggestions state to the filtered locations

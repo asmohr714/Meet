@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 // src/__tests__/App.test.js
 import React from 'react';
-import { render, within } from '@testing-library/react';
+import { render, within, } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { getEvents } from '../api';
 import App from '../App';
@@ -49,6 +49,7 @@ describe('<App /> integration', () => {
     const berlinEvents = allEvents.filter(
       event => event.location === 'Berlin, Germany'
     );
+
  
     expect(allRenderedEventItems.length).toBe(berlinEvents.length);
 
